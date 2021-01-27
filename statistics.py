@@ -7,7 +7,7 @@ def calculateStats(numbers):
     res["avg"]=(sum(numbers)/l)
     res["max"]=max(numbers)
     res["min"]=min(numbers)
-   else:
+  else:
     res["avg"]=res["max"]=res["min"]=math.nan;
     
   return res
