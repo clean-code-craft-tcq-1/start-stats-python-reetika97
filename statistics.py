@@ -2,7 +2,7 @@
 import math
 def calculateStats(numbers):
   l=len(numbers)
-  results={"avg":0,"max":0,"min":0};
+  res={"avg":0,"max":0,"min":0};
   if l!=0:
     res["avg"]=(sum(numbers)/l)
     res["max"]=max(numbers)
@@ -10,4 +10,4 @@ def calculateStats(numbers):
   else:
     res["avg"]=res["max"]=res["min"]=math.nan;
     
-  return results
+  return res
