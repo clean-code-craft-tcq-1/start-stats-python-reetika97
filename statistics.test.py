@@ -3,23 +3,23 @@ import statistics
 import math
 
 class EmailAlert():
-    emailSent=1
+  emailSent=1
     
 class LEDAlert():
-    ledGlows=1
+  ledGlows=1
 
 class StatsAlerter:
-    def __init__(self,maxThreshold, alerts):
-        self.mt=maxThreshold
-        self.ea=alerts[0].emailSent
-        self.la=alerts[1].ledGlows    
+  def __init__(self,maxThreshold, alerts):
+    self.mt=maxThreshold
+    self.ea=alerts[0].emailSent
+    self.la=alerts[1].ledGlows    
     
-    def checkAndAlert(lt):
-        for i in range(0,len(lt)):
-            if lt[i]>self.mt:
-                self.ea=1
-                self.la=1
-        return alerts
+  def checkAndAlert(lt):
+    for i in range(0,len(lt)):
+        if lt[i]>self.mt:
+            self.ea=1
+            self.la=1
+    return alerts
 
 class StatsTest(unittest.TestCase):
   def test_report_min_max_avg(self):
