@@ -49,4 +49,6 @@ class StatsTest(unittest.TestCase):
     self.assertTrue(ledAlert.ledGlows)
 
 if __name__ == "__main__":
-  unittest.main()
+  #unittest.main()
+  suite = unittest.TestLoader().loadTestsFromTestCase(StatsTest)
+  unittest.TextTestRunner().run(suite)
