@@ -3,10 +3,10 @@ import statistics
 import math
 
 class EmailAlert():
-  emailSent=1
+  emailSent=0
     
 class LEDAlert():
-  ledGlows=1
+  ledGlows=0
 
 class StatsAlerter:
   def __init__(self,maxThreshold, alerts):
@@ -44,7 +44,7 @@ class StatsTest(unittest.TestCase):
     ledAlert = LEDAlert()
     maxThreshold = 10.5
     statsAlerter = StatsAlerter(maxThreshold, [emailAlert, ledAlert])
-    statsAlerter.checkAndAlert([22.6, 12.5, 3.7])
+    [emailAlert.emailSent,ledAlert.ledGlows ]=statsAlerter.checkAndAlert([22.6, 12.5, 3.7])
     self.assertTrue(emailAlert.emailSent)
     self.assertTrue(ledAlert.ledGlows)
 
